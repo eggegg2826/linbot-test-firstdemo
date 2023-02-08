@@ -21,3 +21,7 @@ def get(message_request: MessageRequest):
             ]
         )
     )
+
+    return [
+        msg
+    ]
