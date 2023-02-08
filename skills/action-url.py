@@ -11,12 +11,12 @@ def get(message_request: MessageRequest):
     msg = TemplateSendMessage(
         alt_text='Actions',
         template=ButtonsTemplate(
-            title='111數位共好規範',
-            text='點擊查看',
+            title='Menu',
+            text='Please Click',
             actions=[
                 URIAction(
-                    label='111',
-                    uri='https://www.moeasmea.gov.tw/files/7853/926E142A-7BF5-40DD-9080-534B8B8690CE'
+                    label='google',
+                    uri='https://www.google.com.tw/'
                 )
             ]
         )
