@@ -16,7 +16,7 @@ def get(message_request: MessageRequest):
             actions=[
                 URIAction(
                     label='點擊查看',
-                    uri='https://www.moeasmea.gov.tw/files/7853/926E142A-7BF5-40DD-9080-534B8B8690CE'
+                    uri='https://www.moeasmea.gov.tw/files/7853/926E142A-7BF5-40DD-9080-534B8B8690CE?openExternalBrowser=1'
                 )
             ]
         )
