@@ -7,22 +7,21 @@ from skills import add_skill
 
 @add_skill('規範')
 def get(message_request: MessageRequest):
-    
-   
+
     msg = TemplateSendMessage(
         alt_text='Actions',
         template=ButtonsTemplate(
             title='111年數位共好規範',
-            text='詳細規範請以112年數位共好規範為主',
+            text='目前112年數位共好規範尚未公佈，詳細規範請以112年數位共好規範為主。',
             actions=[
                 URIAction(
-                    label='點擊查看111年數位共好規範',
-                    uri='https://www.moeasmea.gov.tw/files/7853/926E142A-7BF5-40DD-9080-534B8B8690CE?openExternalBrowser=1'
+                    label='點擊查看',
+                    uri='https://www.moeasmea.gov.tw/files/7853/926E142A-7BF5-40DD-9080-534B8B8690CE'
                 )
             ]
         )
     )
 
     return [
-         msg
+        msg
     ]
