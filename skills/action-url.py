@@ -9,7 +9,7 @@ from skills import add_skill
 def get(message_request: MessageRequest):
 
     msg = TemplateSendMessage(
-        alt_text='Actions',
+        alt_text='規範',
         template=ButtonsTemplate(
             title='數位共好規範',
             text='目前112年數位共好規範尚未公佈，詳細規範請以112年數位共好規範為主。',
