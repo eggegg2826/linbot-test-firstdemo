@@ -12,7 +12,7 @@ def get(message_request: MessageRequest):
         alt_text='案例分享會報名',
         template=ButtonsTemplate(
             title='案例分享會報名',
-            text='台中場-2/15(三)下午兩點,高雄場-2/16(四)下午兩點,台北場-2/21(二)下午兩點',
+            text='台中場-2/15(三)下午兩點\n高雄場-2/16(四)下午兩點\n台北場-2/21(二)下午兩點',
             actions=[
                 URIAction(
                     label='點擊報名',
