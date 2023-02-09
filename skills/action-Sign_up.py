@@ -15,7 +15,7 @@ def get(message_request: MessageRequest):
             text='台中場-活動時間：2/15(三) 14：00
                   高雄場-活動時間：2/16(四) 14：00
                   台北場-活動時間：2/21(二) 14：00',
-            actions=[
+            Signup=[
                 URIAction(
                     label='點擊報名',
                     uri='https://forms.gle/jKriGfsCVJ7pdpW47?openExternalBrowser=1'
