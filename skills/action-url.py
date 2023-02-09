@@ -9,9 +9,9 @@ from skills import add_skill
 def get(message_request: MessageRequest):
 
     msg = TemplateSendMessage(
-        alt_text='規範',
+        alt_text='111數位共好規範',
         template=ButtonsTemplate(
-            title='數位共好規範',
+            title='111數位共好規範',
             text='目前112年數位共好規範尚未公佈，詳細規範請以112年數位共好規範為主。',
             actions=[
                 URIAction(
