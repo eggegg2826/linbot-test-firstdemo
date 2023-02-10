@@ -1,4 +1,4 @@
-from linebot.models import TextSendMessage
+from linebot.models import ImageSendMessage
 from models.message_request import MessageRequest
 from skills import add_skill
 import random
@@ -8,7 +8,11 @@ import random
 def get(message_request: MessageRequest):
 
     # 處理字串
-    foods = ("香蕉","葡萄","芒果")
+    foods = {
+        (original_content_url='https://via.placeholder.com/1024x768/333.png/fff',
+        preview_image_url='https://via.placeholder.com/800x600/333.png/fff'),
+        (original_content_url='https://i.imgur.com/nlxEVPp.jpg',
+        preview_image_url='https://i.imgur.com/nlxEVPp.jpg')}
     print(foods)
 
     # 隨機挑選一個項目
@@ -16,7 +20,7 @@ def get(message_request: MessageRequest):
     print(result)
 
     # 處理回傳訊息
-    meg = TextSendMessage(result)
+    meg = ImageSendMessage(result)
 
     return [
         meg
