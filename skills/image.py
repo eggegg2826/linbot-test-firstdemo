@@ -7,9 +7,9 @@ def get(message_request: MessageRequest):
 
     msg = ImageSendMessage(
         #點開後的圖片
-        original_content_url='https://via.placeholder.com/1024x768/333.png/fff',
+        original_content_url='https://drive.google.com/file/d/1_7NGhE0ER9cmp4VdIiAfsGrVziqx3DGm/view?usp=share_link',
         #預覽圖
-        preview_image_url='https://via.placeholder.com/800x600/333.png/fff')
+        preview_image_url='https://drive.google.com/file/d/1_7NGhE0ER9cmp4VdIiAfsGrVziqx3DGm/view?usp=share_link')
 
     return [
         msg
