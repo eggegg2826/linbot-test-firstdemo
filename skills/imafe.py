@@ -7,8 +7,10 @@ def get(message_request: MessageRequest):
 
     msg = p1
     
-    p1 = ImageSendMessage(original_content_url='https://via.placeholder.com/1024x768/333.png/fff',preview_image_url='https://via.placeholder.com/800x600/333.png/fff')
+    p1 = ImageSendMessage(
+         original_content_url='https://via.placeholder.com/1024x768/333.png/fff',
+         preview_image_url='https://via.placeholder.com/800x600/333.png/fff')
 
     return [
-        p1
+        msg
     ]
