@@ -3,6 +3,7 @@ from models.message_request import MessageRequest
 from skills import add_skill
 import random
 
+
 @add_skill('抽水果')
 def get(message_request: MessageRequest):
 
@@ -10,8 +11,9 @@ def get(message_request: MessageRequest):
     preview_image_url='https://via.placeholder.com/800x600/333.png/fff')
     p2 = ImageSendMessage(original_content_url='https://i.imgur.com/nlxEVPp.jpg',
     preview_image_url='https://i.imgur.com/nlxEVPp.jpg')
-        
-        
+    list1 = (p1,p2)
+    image = random.choice([0,1])
+          
     return [
-        p1,p2
+        list1[image]
     ]
