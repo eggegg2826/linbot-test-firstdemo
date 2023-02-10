@@ -1,4 +1,4 @@
-from linebot.models import ImageSendMessage
+from linebot.models import TextSendMessage
 from models.message_request import MessageRequest
 from skills import add_skill
 import random
@@ -19,7 +19,7 @@ def get(message_request: MessageRequest):
     print(result)
 
     # 處理回傳訊息
-    meg = ImageSendMessage(result)
+    meg = TextSendMessage(result)
 
     return [
         meg
