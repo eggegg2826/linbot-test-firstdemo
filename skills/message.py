@@ -4,12 +4,11 @@ from skills import add_skill
 import random
 
 
-@add_skill('黃皓的朋友')
+@add_skill('抽水果')
 def get(message_request: MessageRequest):
 
     # 處理字串
-    foods_str = message_request.message.replace("黃皓的朋友 ", "")
-    foods = foods_str.split('.')
+    foods = ("香蕉","葡萄","芒果")
     print(foods)
 
     # 隨機挑選一個項目
