@@ -7,7 +7,7 @@ from skills import add_skill
 def get(message_request: MessageRequest):
     msg = TextSendMessage(text="查詢")
     msg1 = TextSendMessage(text="查詢2")
-    if msg == "查詢":
+    if msg in message_request.message:
         return[msg]
     else:
         return[msg1]
