@@ -5,9 +5,8 @@ from skills import add_skill
 
 @add_skill('{not_match}')
 def get(message_request: MessageRequest):
-    msg = TextSendMessage(text="查詢")
-    msg1 = TextSendMessage(text="查詢2")
-    if msg in message_request.message:
-        return[msg]
+    qwe = message_request.message("")
+    if "查詢" in qwe:
+        return[TextSendMessage(text="查詢")]
     else:
-        return[msg1]
+        return[TextSendMessage(text="錯誤")]
