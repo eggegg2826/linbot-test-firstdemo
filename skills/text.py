@@ -5,7 +5,7 @@ from skills import add_skill
 
 @add_skill('{not_match}')
 def get(message_request: MessageRequest):
-    qwe = message_request.message("")
+    qwe = {message_request.message}
     if "查詢" in qwe:
         return[TextSendMessage(text="查詢")]
     else:
