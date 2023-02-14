@@ -4,7 +4,7 @@ from skills import add_skill
 
 @add_skill('查詢')
 def get(message_request: MessageRequest):
-    msg = TextSendMessage("目前MENU功能如下:\n1.輸入『規範』查看最新規範\n2.輸入『報名』報名案例分享會")
+    msg = TextSendMessage("目前MENU功能如下:\n1.輸入『規範』查看最新規範\n2.輸入『報名』查看案例分享會")
     return [
         msg
     ]
