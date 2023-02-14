@@ -11,7 +11,7 @@ def get(message_request: MessageRequest):
     msg = TemplateSendMessage(
         alt_text='案例分享會報名',
         template=ButtonsTemplate(
-            title='案例分享會報名',
+            title='輔導小微型企業數位轉型-案例分享會',
             text='台中場-2/15(三)下午兩點\n高雄場-2/16(四)下午兩點\n台北場-2/21(二)下午兩點',
             actions=[
                 URIAction(
