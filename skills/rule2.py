@@ -45,4 +45,4 @@ def get(message_request: MessageRequest):
     elif "報名" or "分享會" or "說明會" in mg_st:
         return[share]
     else:
-        return[TextSendMessage(text="抱歉，我不曉得您說的問題，若還有疑問，歡迎在服務時間來電本協會。")]
+        return[TextSendMessage(text="抱歉，我不曉得您說的問題，若還有疑問，歡迎在營業時間來電本協會。")]
