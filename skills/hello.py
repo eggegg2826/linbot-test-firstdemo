@@ -3,7 +3,7 @@ from linebot.models import TextSendMessage
 from models.message_request import MessageRequest
 from skills import add_skill
 
-@add_skill('查看 ')
+@add_skill('我知道 ')
 def get(message_request: MessageRequest):
     x = message_request.message.split()
     y = x[1]
