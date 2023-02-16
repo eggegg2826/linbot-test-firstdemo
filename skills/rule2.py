@@ -6,10 +6,11 @@ from skills import add_skill
 
 @add_skill('查查看 ')
 def get(message_request: MessageRequest):
-    wemg = message_request.message.split()
-    mg_st = wemg[1]
+    msg = message_request.message.split()
+    mg_st = msg[1]
 
-    msg = TemplateSendMessage(
+    #規範
+    rule = TemplateSendMessage(
         alt_text='111數位共好規範',
         template=ButtonsTemplate(
             title='111數位共好規範',
@@ -23,7 +24,25 @@ def get(message_request: MessageRequest):
         )
     )
 
+    #案例分享會報名
+    share = TemplateSendMessage(
+        alt_text='案例分享會報名',
+        template=ButtonsTemplate(
+            title='案例分享會報名',
+            text='台中場-2/15(三)下午兩點\n高雄場-2/16(四)下午兩點\n台北場-2/21(二)下午兩點',
+            actions=[
+                URIAction(
+                    label='點擊報名',
+                    uri='https://forms.gle/jKriGfsCVJ7pdpW47?openExternalBrowser=1'
+                )
+            ]
+        )
+    )
+
+    #IF規則
     if "規範" in mg_st:
-        return[msg]
+        return[rule]
+    elif "報名" or "分享會" or "說明會" in mg_st:
+        return[share]
     else:
         return[TextSendMessage(text="錯誤")]
