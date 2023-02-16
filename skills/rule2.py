@@ -4,7 +4,7 @@ from linebot.models.actions import URIAction
 from models.message_request import MessageRequest
 from skills import add_skill
 
-@add_skill('查查看  ')
+@add_skill('查查看 ')
 def get(message_request: MessageRequest):
     wemg = message_request.message.split()
     mg_st = wemg[1]
