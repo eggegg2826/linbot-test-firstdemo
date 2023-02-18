@@ -38,18 +38,11 @@ def get(message_request: MessageRequest):
             ]
         )
     )
-    
-    no = TemplateSendMessage(
-        alt_text='112年推動企業數位共好計畫提案說明會',
-        template=ButtonsTemplate(
-            title='112年推動企業數位共好計畫提案說明會',
-            text='台中場-2/15(三)下午兩點\n高雄場-2/16(四)下午兩點\n台北場-2/21(二)下午兩點',
-        )
-    )
+
     #IF規則
     if "規範" in mg_st:
-        return[rule]
-    elif "報名" or "分享會" or "說明會" in mg_st:
         return[share]
+    elif "報名" in mg_st:
+        return[rule]
     else:
-        return[no]
+        return[TextSendMessage(text="錯誤")]
