@@ -39,12 +39,10 @@ def get(message_request: MessageRequest):
         )
     )
     
-    #如果都找不到
-    no = TextSendMessage('抱歉，我不曉得您說的問題。若還有疑問，歡迎在服務時間來電本協會。')
     #IF規則
     if "規範" in mg_st:
         return[rule]
     elif "報名" or "分享會" or "說明會" in mg_st:
         return[share]
     else:
-        return[no]
+        return[TextSendMessage(text=f'抱歉，我不曉得您說的問題。若還有疑問，歡迎在服務時間來電本協會。')]
