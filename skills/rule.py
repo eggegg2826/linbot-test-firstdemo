@@ -1,5 +1,5 @@
-from linebot.models import TemplateSendMessage,TextSendMessage
-from linebot.models.template import ButtonsTemplate
+from linebot.models import TextSendMessage
+from linebot.models.template import ButtonsTemplate, TemplateSendMessage
 from linebot.models.actions import URIAction
 from models.message_request import MessageRequest
 from skills import add_skill
