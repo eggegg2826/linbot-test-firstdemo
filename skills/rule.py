@@ -14,7 +14,7 @@ def get(message_request: MessageRequest):
         alt_text='112年數位共好規範',
         template=ButtonsTemplate(
             title='112年數位共好規範',
-            text='112年推動企業數位共好計畫即日起開放提案\n提案截止時間：112/03/16(四)17:00截止',
+            text='112年推動企業數位共好計畫即日起開放提案\n◆提案截止時間：112/03/16(四)17:00截止',
             actions=[
                 URIAction(
                     label='點擊查看規範',
