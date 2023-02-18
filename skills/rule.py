@@ -25,8 +25,6 @@ def get(message_request: MessageRequest):
     )
 
     #案例分享會報名
-    s1 = "報名"
-    s2 = "說明會"
     share = TemplateSendMessage(
         alt_text='112年推動企業數位共好計畫提案說明會',
         template=ButtonsTemplate(
@@ -44,7 +42,7 @@ def get(message_request: MessageRequest):
     #IF規則
     if "規範" in mg_st:
         return[rule]
-    elif s1 or s2 in mg_st:
+    elif "說明會" in mg_st:
         return[share]
     else:
         return[TextSendMessage(text="抱歉，我不曉得您說的問題。若還有疑問，歡迎在服務時間來電本協會。")]
