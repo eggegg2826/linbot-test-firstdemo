@@ -11,14 +11,14 @@ def get(message_request: MessageRequest):
 
     #規範
     rule = TemplateSendMessage(
-        alt_text='111數位共好規範',
+        alt_text='112年數位共好規範',
         template=ButtonsTemplate(
-            title='111數位共好規範',
-            text='目前112年數位共好規範尚未公佈，詳細規範請以112年數位共好規範為主。',
+            title='112年數位共好規範',
+            text="112年推動企業數位共好計畫即日起開放提案。\n◆提案截止時間：112/03/16(四)17:00截止\n※線上提案，請提早至線上提案系統申辦帳號及填寫相關資料，並且於收件截止前進行線上繳件唷！"。',
             actions=[
                 URIAction(
                     label='點擊查看規範',
-                    uri='https://www.moeasmea.gov.tw/files/7853/926E142A-7BF5-40DD-9080-534B8B8690CE?openExternalBrowser=1'
+                    uri='file:///C:/Users/arthur.wu/Downloads/9109cb1b-a72e-4613-9d8a-249cc43fa74b.pdf'
                 )
             ]
         )
@@ -26,13 +26,13 @@ def get(message_request: MessageRequest):
 
     #案例分享會報名
     share = TemplateSendMessage(
-        alt_text='案例分享會報名',
+        alt_text='112年推動企業數位共好計畫提案說明會',
         template=ButtonsTemplate(
-            title='案例分享會報名',
+            title='112年推動企業數位共好計畫提案說明會報名',
             text='台中場-2/15(三)下午兩點\n高雄場-2/16(四)下午兩點\n台北場-2/21(二)下午兩點',
             actions=[
                 URIAction(
-                    label='點擊報名',
+                    label='報名說明會',
                     uri='https://forms.gle/jKriGfsCVJ7pdpW47?openExternalBrowser=1'
                 )
             ]
