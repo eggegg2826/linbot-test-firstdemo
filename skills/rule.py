@@ -38,11 +38,28 @@ def get(message_request: MessageRequest):
             ]
         )
     )
+
+    #計畫官網
+    ow = TemplateSendMessage(
+        alt_text='計畫官網',
+        template=ButtonsTemplate(
+            title='數位共好計畫官網',
+            text='內有最新計畫公告及資訊',
+            actions=[
+                URIAction(
+                    label='前往官網',
+                    uri='https://www.198.org.tw/'
+                )
+            ]
+        )
+    )
     
     #IF規則
     if "規範" in mg_st:
         return[rule]
     elif ("報名" in mg_st) or ("說明會" in mg_st):
         return[share]
+    elif ("官網" in mg_st) or ("計畫" in mg_st):
+        return[ow]
     else:
         return[TextSendMessage(text="抱歉，我不曉得您說的問題。若還有疑問，歡迎在服務時間來電本協會。")]
