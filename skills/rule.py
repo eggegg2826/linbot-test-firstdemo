@@ -1,5 +1,5 @@
-from linebot.models import TextSendMessage, TemplateSendMessage
-from linebot.models.template import ButtonsTemplate
+from linebot.models import TextSendMessage
+from linebot.models.template import ButtonsTemplate, TemplateSendMessage
 from linebot.models.actions import URIAction
 from models.message_request import MessageRequest
 from skills import add_skill
@@ -38,11 +38,11 @@ def get(message_request: MessageRequest):
             ]
         )
     )
-
+    
     #IF規則
     if "規範" in mg_st:
         return[rule]
-    elif "說明會" in mg_st:
-        return[share]   
+    elif ("報名" or "說明會" or "說明會") in mg_st:
+        return[share]
     else:
         return[TextSendMessage(text="抱歉，我不曉得您說的問題。若還有疑問，歡迎在服務時間來電本協會。")]
