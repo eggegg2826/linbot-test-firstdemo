@@ -42,7 +42,7 @@ def get(message_request: MessageRequest):
     #IF規則
     if "規範" in mg_st:
         return[rule]
-    elif "說明會" in mg_st:
-        return[share]
+    elif "說明會" or "報名" in mg_st:
+        return[share]   
     else:
         return[TextSendMessage(text="抱歉，我不曉得您說的問題。若還有疑問，歡迎在服務時間來電本協會。")]
