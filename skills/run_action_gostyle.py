@@ -5,7 +5,7 @@ from models.message_request import MessageRequest
 from skills import add_skill
 
 
-@add_skill('購世代')
+@add_skill('地方創生好物')
 def get(message_request: MessageRequest):
 
     msg = TemplateSendMessage(
