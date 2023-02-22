@@ -11,7 +11,7 @@ def get(message_request: MessageRequest):
     buttons_template_message = TemplateSendMessage(
     alt_text='成為軟協會員',
     template=ButtonsTemplate(
-            thumbnail_image_url='https://imgur.com/a/IAaVOzR',
+            thumbnail_image_url='https://imgur.com/a/KMcNHj7',
             title='竭誠歡迎您成為軟協會員',
             text='請填寫表單，收到您填寫的表單後，我們將會盡快與您聯絡。',
             actions=[
