@@ -47,7 +47,7 @@ def get(message_request: MessageRequest):
             text='內有最新計畫公告及資訊',
             actions=[
                 URIAction(
-                    label='前往官網',
+                    label='前往計畫官網',
                     uri='https://www.198.org.tw/'
                 )
             ]
@@ -62,4 +62,4 @@ def get(message_request: MessageRequest):
     elif ("官網" in mg_st) or ("計畫" in mg_st):
         return[ow]
     else:
-        return[TextSendMessage(text="抱歉，我不曉得您說的問題。若還有疑問，歡迎在服務時間來電本協會。")]
+        return[TextSendMessage(text="抱歉我不懂您的意思，目前MENU功能如下:\n1.輸入『查詢 規範』查看最新規範\n2.輸入『查詢 計畫官網』前往計畫官網")]
