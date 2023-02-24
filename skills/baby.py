@@ -11,7 +11,7 @@ def get(message_request: MessageRequest):
     preview_image_url='https://i.imgur.com/pEjApKJ.jpg')
     p2 = ImageSendMessage(original_content_url='https://i.imgur.com/4ODlvyI.jpg',
     preview_image_url='https://i.imgur.com/4ODlvyI.jpg')
-    p3 = ImageSendMessage(original_content_url=https://i.imgur.com/85quJ4t.jpg',
+    p3 = ImageSendMessage(original_content_url='https://i.imgur.com/85quJ4t.jpg',
     preview_image_url='https://i.imgur.com/85quJ4t.jpg')
     p4 = ImageSendMessage(original_content_url='https://i.imgur.com/K87b26Q.jpg',
     preview_image_url='https://i.imgur.com/K87b26Q.jpg')
