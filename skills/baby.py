@@ -15,10 +15,6 @@ def get(message_request: MessageRequest):
     preview_image_url='https://i.imgur.com/85quJ4t.jpg')
     p4 = ImageSendMessage(original_content_url='https://i.imgur.com/K87b26Q.jpg',
     preview_image_url='https://i.imgur.com/K87b26Q.jpg')
-    #p5 = ImageSendMessage(original_content_url='https://i.imgur.com/Y3MbyS2.jpg',
-    #preview_image_url='https://i.imgur.com/Y3MbyS2.jpg')
-    #p6 = ImageSendMessage(original_content_url='https://i.imgur.com/QIdizT7.jpg',
-    #preview_image_url='https://i.imgur.com/QIdizT7.jpg')
     
     list1 = (p1,p2,p3,p4)
     image = random.choice([0,1,2,3])
