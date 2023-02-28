@@ -20,10 +20,6 @@ def get(message_request: MessageRequest):
                 MessageAction(
                      label='b',
                      text='message text'
-                 ),
-                MessageAction(
-                     label='c',
-                     text='message text'
                  )
             ]
         )
