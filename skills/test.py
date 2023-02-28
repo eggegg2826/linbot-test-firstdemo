@@ -14,11 +14,15 @@ def get(message_request: MessageRequest):
             text='Are you sure?',
             actions=[
                  MessageAction(
-                     label='y',
+                     label='a',
                      text='message text'
                  ),
                 MessageAction(
-                     label='n',
+                     label='b',
+                     text='message text'
+                 ),
+                MessageAction(
+                     label='c',
                      text='message text'
                  )
             ]
