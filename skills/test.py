@@ -1,4 +1,3 @@
-
 from linebot.models import TemplateSendMessage
 from linebot.models.template import ConfirmTemplate
 from linebot.models.actions import MessageAction
