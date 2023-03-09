@@ -30,6 +30,7 @@ async def callback(request: Request):
 
 @ handler.add(JoinEvent)
 def handle_join_event(event):
+    print(f"Join event: {event}")
     # 當有人加入聊天室時，event.source.type 為 "group" 或 "room"
     if event.source.type == "group" or event.source.type == "room":
         # 發送公告訊息
