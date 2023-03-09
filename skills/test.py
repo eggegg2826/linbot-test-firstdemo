@@ -1,30 +1,39 @@
 from linebot.models import TemplateSendMessage
-from linebot.models.template import ConfirmTemplate
-from linebot.models.actions import MessageAction
+from linebot.models.template import CarouselTemplate, CarouselColumn
 from models.message_request import MessageRequest
+from models.message.action import MessageAction
 from skills import add_skill
-
 
 @add_skill('測試')
 def get(message_request: MessageRequest):
 
-    msg = TemplateSendMessage(
-        alt_text='Confirm template',
-        template=ConfirmTemplate(
-            text='Are you sure?',
-            actions=[
-                 MessageAction(
-                     label='a',
-                     text='message text'
-                 ),
-                MessageAction(
-                     label='b',
-                     text='message text'
-                 )
+    carousel_template_message = TemplateSendMessage(
+        alt_text='Carousel template',
+        template=CarouselTemplate(
+            columns=[
+                CarouselColumn(
+                    title='this is menu1',
+                    text='description1',
+                    actions=[
+                        MessageAction(
+                            label='message1',
+                            text='message text1'
+                        )
+                    ]
+                ),
+                CarouselColumn(
+                    title='this is menu2',
+                    text='description2',
+                    actions=[
+                        MessageAction(
+                            label='message2',
+                            text='message text2'
+                        ),
+                    ]
+                )
             ]
         )
     )
 
     return [
-        msg
-    ]
+        carousel_template_message
