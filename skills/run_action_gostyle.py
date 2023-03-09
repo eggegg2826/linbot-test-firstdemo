@@ -15,8 +15,16 @@ def get(message_request: MessageRequest):
             text='「好吃、好玩、好買」購物情報與商品資訊的導購平台，匯集許多地方創生店家，趕快進來看看~',
             actions=[
                 URIAction(
-                    label='前往購世代',
+                    label='前往購世代商城',
                     uri='https://gostyle.org.tw/'
+                ),
+                URIAction(
+                    label='追蹤購世代FB',
+                    uri='https://www.facebook.com/Gostylelife/'
+                ),
+                URIAction(
+                    label='追蹤購世代IG',
+                    uri='https://www.instagram.com/gostylelife/'
                 )
             ]
         )
