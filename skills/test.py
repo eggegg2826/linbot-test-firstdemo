@@ -1,8 +1,9 @@
 from linebot.models import TemplateSendMessage
-from linebot.models.template import CarouselTemplate, CarouselColumn
+from linebot.models.template import CarouselColumn, CarouselTemplate
 from models.message_request import MessageRequest
 from linebot.models.actions import MessageAction
 from skills import add_skill
+
 
 @add_skill('測試')
 def get(message_request: MessageRequest):
@@ -16,6 +17,7 @@ def get(message_request: MessageRequest):
                     title='this is menu1',
                     text='description1',
                     actions=[
+        
                         MessageAction(
                             label='message1',
                             text='message text1'
@@ -29,7 +31,7 @@ def get(message_request: MessageRequest):
                     actions=[
                         MessageAction(
                             label='message2',
-                              text='message text2'
+                            text='message text2'
                         ),
                     ]
                 )
