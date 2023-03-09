@@ -31,12 +31,7 @@ def get(message_request: MessageRequest):
                 URIAction(
                     label='計畫官網',
                     uri='https://www.198.org.tw/'
-                ),
-                URIAction(
-                    label='計畫Facebook',
-                    uri='https://www.facebook.com/UneedIcare/?locale=zh_TW'
                 )
-                
             ]
         )
     )
