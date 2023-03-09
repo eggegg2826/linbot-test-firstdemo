@@ -13,11 +13,10 @@ def get(message_request: MessageRequest):
         template=CarouselTemplate(
             columns=[
                 CarouselColumn(
-                    thumbnail_image_url='https://via.placeholder.com/300x300/333.png/fff',
+                    
                     title='this is menu1',
                     text='description1',
                     actions=[
-        
                         MessageAction(
                             label='message1',
                             text='message text1'
@@ -25,7 +24,7 @@ def get(message_request: MessageRequest):
                     ]
                 ),
                 CarouselColumn(
-                    thumbnail_image_url='https://via.placeholder.com/300x300/333.png/fff',
+                    
                     title='this is menu2',
                     text='description2',
                     actions=[
