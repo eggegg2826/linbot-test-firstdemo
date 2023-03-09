@@ -69,7 +69,7 @@ def get(message_request: MessageRequest):
     #IF規則
     if ("規範" in mg_st) or ("計畫" in mg_st) or ("問題" in mg_st) or ("資訊" in mg_st):
         return[rule]
-    elif ("A" in mg_st) or ("" in mg_st):
+    elif ("A" in mg_st):
         return[share]
     elif ("官網" in mg_st) or ("fb" in mg_st):
         return[ow]
