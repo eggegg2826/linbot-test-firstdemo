@@ -27,10 +27,6 @@ def get(message_request: MessageRequest):
                 URIAction(
                     label='前往線上提案繳件',
                     uri='https://www.cisa.tw/365/login/index.php'
-                ),
-                URIAction(
-                    label='計畫官網',
-                    uri='https://www.198.org.tw/'
                 )
             ]
         )
@@ -53,11 +49,15 @@ def get(message_request: MessageRequest):
 
     #計畫官網
     ow = TemplateSendMessage(
-        alt_text='計畫官網',
+        alt_text='計畫FB粉專與官網',
         template=ButtonsTemplate(
-            title='數位共好計畫官網',
-            text='內有最新計畫公告及資訊',
+            title='數位共好計畫FB粉專與官網',
+            text='按讚追蹤FB粉絲團-頭家愛行銷，取得最新計畫公告及資訊',
             actions=[
+                URIAction(
+                    label='按讚追蹤FB粉絲團',
+                    uri='https://www.facebook.com/UneedIcare/?ref=page_internal&locale=zh_TW'
+                ),
                 URIAction(
                     label='前往計畫官網',
                     uri='https://www.198.org.tw/'
@@ -67,11 +67,11 @@ def get(message_request: MessageRequest):
     )
     
     #IF規則
-    if ("規範" in mg_st) or ("計畫" in mg_st) or ("官網" in mg_st) or ("粉絲團" in mg_st):
+    if ("規範" in mg_st) or ("計畫" in mg_st) or ("問題" in mg_st):
         return[rule]
     elif ("A" in mg_st) or ("B" in mg_st):
         return[share]
-    elif ("C" in mg_st):
+    elif ("官網" in mg_st) or ("fb" in mg_st):
         return[ow]
     else:
-        return[TextSendMessage(text="抱歉我不懂您的意思，目前MENU功能如下:\n1.輸入『查詢 共好計畫』查看最新計畫資訊與線上提案繳件")]
+        return[TextSendMessage(text="抱歉我不懂您的意思，目前MENU功能如下:\n1.輸入『查詢 共好計畫』查看最新規範與線上提案繳件\n2.輸入『查詢 fb粉絲團』查看計畫FB與官網")]
