@@ -71,7 +71,7 @@ def get(message_request: MessageRequest):
         return[rule]
     elif ("A" in mg_st):
         return[share]
-    elif ("官網" in mg_st) or ("fb" in mg_st):
+    elif ("官網" in mg_st) or ("fb" in mg_st) or ("FB" in mg_st):
         return[ow]
     else:
         return[TextSendMessage(text="抱歉我不懂您的意思，目前MENU功能如下:\n1.輸入『查詢 共好計畫』查看最新規範與線上提案繳件\n2.輸入『查詢 fb粉絲團』查看計畫FB與官網")]
