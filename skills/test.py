@@ -1,51 +1,31 @@
 from linebot.models import TemplateSendMessage
-from linebot.models.template import CarouselColumn, CarouselTemplate
+from linebot.models.template import ButtonsTemplate
+from linebot.models.actions import URIAction
 from models.message_request import MessageRequest
-from linebot.models.actions import MessageAction
 from skills import add_skill
 
 
 @add_skill('測試')
 def get(message_request: MessageRequest):
 
-    carousel_template_message = TemplateSendMessage(
-        alt_text='Carousel template',
-        template=CarouselTemplate(
-            columns=[
-                CarouselColumn(
-                    
-                    title='this is menu1',
-                    text='description1',
-                    actions=[
-                        MessageAction(
-                            label='message1',
-                            text='message text1'
-                        ),
-                        MessageAction(
-                            label='message1-1',
-                            text='message text1-1'
-                        ),
-                        MessageAction(
-                            label='message1-2',
-                            text='message text1-2'
-                        )
-                    ]
+    msg = TemplateSendMessage(
+        alt_text='123',
+        template=ButtonsTemplate(
+            title='123',
+            text='竭誠歡迎您成為軟協會員，若收到您填寫的表單後，我們將盡快與您聯絡。',
+            actions=[
+                URIAction(
+                    label='加入成為軟協會員',
+                    uri='https://forms.gle/5341yP5YqHsorWcC7'
                 ),
-                CarouselColumn(
-                    
-                    title='this is menu2',
-                    text='description2',
-                    actions=[
-                        MessageAction(
-                            label='message2',
-                            text='message text2'
-                        ),
-                    ]
+                URIAction(
+                    label='了解更多軟協',
+                    uri='https://gostyle.org.tw/'
                 )
             ]
         )
     )
-
+    
     return [
-        carousel_template_message
+        msg
     ]
