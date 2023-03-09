@@ -9,16 +9,20 @@ def get(message_request: MessageRequest):
     msg = message_request.message.split()
     mg_st = msg[1]
 
-    #規範
+    #規範、數位共好計畫
     rule = TemplateSendMessage(
-        alt_text='112年數位共好規範',
+        alt_text='112年數位共好計畫',
         template=ButtonsTemplate(
-            title='112年數位共好規範',
+            title='112年數位共好計畫',
             text='112年推動企業數位共好計畫即日起開放提案\n◆提案截止時間：112/03/16(四)17:00截止',
             actions=[
                 URIAction(
-                    label='點擊查看規範',
+                    label='112年數位共好規範',
                     uri='https://www.moeasmea.gov.tw/files/10106/562676DF-30D2-4818-9375-3D594A67D85E'
+                ),
+                URIAction(
+                    label='前往線上提案繳件',
+                    uri='https://www.cisa.tw/365/login/index.php'
                 )
             ]
         )
@@ -55,11 +59,11 @@ def get(message_request: MessageRequest):
     )
     
     #IF規則
-    if "規範" in mg_st:
+    if ("規範" in mg_st) or ("計畫" in mg_st):
         return[rule]
     elif ("報名" in mg_st) or ("說明會" in mg_st):
         return[share]
-    elif ("官網" in mg_st) or ("計畫" in mg_st):
+    elif ("官網" in mg_st):
         return[ow]
     else:
-        return[TextSendMessage(text="抱歉我不懂您的意思，目前MENU功能如下:\n1.輸入『查詢 規範』查看最新規範\n2.輸入『查詢 計畫官網』前往計畫官網")]
+        return[TextSendMessage(text="抱歉我不懂您的意思，目前MENU功能如下:\n1.輸入『查詢 共好計畫』查看最新規範與線上提案繳件\n2.輸入『查詢 計畫官網』前往計畫官網")]
