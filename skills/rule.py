@@ -21,9 +21,22 @@ def get(message_request: MessageRequest):
                     uri='https://www.moeasmea.gov.tw/files/10106/562676DF-30D2-4818-9375-3D594A67D85E'
                 ),
                 URIAction(
+                    label='計畫常見Q&A',
+                    uri='https://liff.line.me/1657887101-1DxD04M9'
+                ), 
+                URIAction(
                     label='前往線上提案繳件',
                     uri='https://www.cisa.tw/365/login/index.php'
+                ),
+                URIAction(
+                    label='計畫官網',
+                    uri='https://www.198.org.tw/'
+                ),
+                URIAction(
+                    label='計畫Facebook',
+                    uri='https://www.facebook.com/UneedIcare/?locale=zh_TW'
                 )
+                
             ]
         )
     )
@@ -59,11 +72,11 @@ def get(message_request: MessageRequest):
     )
     
     #IF規則
-    if ("規範" in mg_st) or ("計畫" in mg_st):
+    if ("規範" in mg_st) or ("計畫" in mg_st) or ("官網" in mg_st) or ("粉絲團" in mg_st):
         return[rule]
-    elif ("報名" in mg_st) or ("說明會" in mg_st):
+    elif ("A" in mg_st) or ("B" in mg_st):
         return[share]
-    elif ("官網" in mg_st):
+    elif ("C" in mg_st):
         return[ow]
     else:
-        return[TextSendMessage(text="抱歉我不懂您的意思，目前MENU功能如下:\n1.輸入『查詢 共好計畫』查看最新規範與線上提案繳件\n2.輸入『查詢 計畫官網』前往計畫官網")]
+        return[TextSendMessage(text="抱歉我不懂您的意思，目前MENU功能如下:\n1.輸入『查詢 共好計畫』查看最新計畫資訊與線上提案繳件")]
