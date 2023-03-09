@@ -9,18 +9,22 @@ from skills import add_skill
 def get(message_request: MessageRequest):
 
     buttons_template_message = TemplateSendMessage(
-    alt_text='成為軟協會員',
-    template=ButtonsTemplate(
-            thumbnail_image_url='https://upload.cc/i1/2023/02/22/MupB5T.png',
+        alt_text='成為軟協會員',
+        template=ButtonsTemplate(
+            thumbnail_image_url='https://imgur.com/a/KMcNHj7',
             title='竭誠歡迎您成為軟協會員',
             text='請填寫表單，收到您填寫的表單後，我們將會盡快與您聯絡。',
             actions=[
-                    URIAction(
-                            label='加入成為軟協會員',
-                            uri='https://forms.gle/5341yP5YqHsorWcC7'
-                    )
+                URIAction(
+                    label='加入成為軟協會員',
+                    uri='https://forms.gle/5341yP5YqHsorWcC7'
+                ),
+                URIAction(
+                    label='前往軟協官網',
+                    uri='https://www.cisanet.org.tw/'
+                )
             ]
-    )
+        )
     )
     return [
         buttons_template_message
