@@ -20,6 +20,14 @@ def get(message_request: MessageRequest):
                         MessageAction(
                             label='message1',
                             text='message text1'
+                        ),
+                        MessageAction(
+                            label='message1-1',
+                            text='message text1-1'
+                        ),
+                        MessageAction(
+                            label='message1-2',
+                            text='message text1-2'
                         )
                     ]
                 ),
