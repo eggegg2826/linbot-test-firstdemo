@@ -27,6 +27,10 @@ def get(message_request: MessageRequest):
                 URIAction(
                     label='前往線上提案繳件',
                     uri='https://www.cisa.tw/365/login/index.php'
+                ), 
+                URIAction(
+                    label='查詢受輔導業者是否符合資格',
+                    uri='https://www.tcloud.gov.tw/sme-application'
                 )
             ]
         )
