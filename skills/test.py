@@ -1,31 +1,24 @@
-from linebot.models import TemplateSendMessage
-from linebot.models.template import ButtonsTemplate
-from linebot.models.actions import URIAction
-from models.message_request import MessageRequest
-from skills import add_skill
+from fastapi import FastAPI
+import openpyxl
+import requests
 
+app = FastAPI()
 
-@add_skill('測試')
-def get(message_request: MessageRequest):
+@app.get("/scrape")
+async def scrape():
+    # 下載 Excel 檔案
+    url = "https://docs.google.com/spreadsheets/d/1xT20il2JtGCHwjnB4Azbsfk5Xbi3_7fTrJKkNcI2Bko/edit?usp=sharing"
+    response = requests.get(url)
+    response.raise_for_status()
 
-    msg = TemplateSendMessage(
-        alt_text='123',
-        template=ButtonsTemplate(
-            title='123',
-            text='竭誠歡迎您成為軟協會員，若收到您填寫的表單後，我們將盡快與您聯絡。',
-            actions=[
-                URIAction(
-                    label='加入成為軟協會員',
-                    uri='https://forms.gle/5341yP5YqHsorWcC7'
-                ),
-                URIAction(
-                    label='了解更多軟協',
-                    uri='https://gostyle.org.tw/'
-                )
-            ]
-        )
-    )
-    
-    return [
-        msg
-    ]
+    # 讀取 Excel 檔案
+    wb = openpyxl.load_workbook(filename=response.content)
+    ws = wb.active
+
+    # 解析 Excel 檔案
+    data = []
+    for row in ws.iter_rows(min_row=2, values_only=True):
+        name, age, address = row
+        data.append({"name": name, "age": age, "address": address})
+
+    return {"data": data}
