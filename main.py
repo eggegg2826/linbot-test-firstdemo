@@ -34,6 +34,24 @@ async def callback(request: Request, x_line_signature: str = Header(None)):
         raise HTTPException(status_code=400, detail="Invalid signature. Please check your channel access token/channel secret.")
     return 'OK'
 
+@handler.add(event=FollowEvent)
+def handle_message(event):
+    print('follow', event)
+    
+    # 取得使用者個人資訊
+    profile = line_bot_api.get_profile(event.source.user_id)
+    print(profile.display_name)
+    print(profile.user_id)
+    print(profile.picture_url)
+    print(profile.status_message)
+    
+    # 回傳歡迎訊息
+    line_bot_api.reply_message(event.reply_token, TextSendMessage(f'Hi, {profile.display_name}\n請先提供公司名稱，讓小助理先認識您哦'))
+
+@handler.add(event=UnfollowEvent)
+def handle_message(event):
+    print('unfollow', event)
+    
 @handler.add(event=MessageEvent, message=TextMessage)
 def handle_message(event):
     msg_request = MessageRequest()
@@ -43,3 +61,4 @@ def handle_message(event):
     
     func = get_message(msg_request)
     line_bot_api.reply_message(event.reply_token, func)
+    
