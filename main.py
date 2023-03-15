@@ -33,7 +33,7 @@ async def callback(request: Request, x_line_signature: str = Header(None)):
     except InvalidSignatureError:
         raise HTTPException(status_code=400, detail="Invalid signature. Please check your channel access token/channel secret.")
     return 'OK'
-    
+
 @handler.add(event=MessageEvent, message=TextMessage)
 def handle_message(event):
     msg_request = MessageRequest()
@@ -43,4 +43,3 @@ def handle_message(event):
     
     func = get_message(msg_request)
     line_bot_api.reply_message(event.reply_token, func)
-    
