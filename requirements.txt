@@ -2,3 +2,5 @@ fastAPI
 uvicorn
 line-bot-sdk
 python-dotenv
+openpyx1
+requests
