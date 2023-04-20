@@ -51,20 +51,16 @@ def get(message_request: MessageRequest):
         )
     )
 
-    #計畫官網
+    #計畫FB粉絲專頁
     ow = TemplateSendMessage(
-        alt_text='計畫FB粉專與官網',
+        alt_text='計畫FB粉絲專頁',
         template=ButtonsTemplate(
-            title='數位共好計畫FB粉專與官網',
+            title='數位共好計畫FB粉絲專頁',
             text='按讚追蹤FB粉絲團-頭家愛行銷，取得最新計畫公告及資訊',
             actions=[
                 URIAction(
                     label='按讚追蹤FB粉絲團',
                     uri='https://www.facebook.com/UneedIcare/?ref=page_internal&locale=zh_TW'
-                ),
-                URIAction(
-                    label='前往計畫官網',
-                    uri='https://www.198.org.tw/'
                 )
             ]
         )
