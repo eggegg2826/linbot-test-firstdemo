@@ -14,7 +14,7 @@ def get(message_request: MessageRequest):
         alt_text='112年數位共好計畫',
         template=ButtonsTemplate(
             title='112年數位共好計畫',
-            text='112年推動企業數位共好計畫目前跑流程中⋯尚未公布，若公告會於軟協官網上，再請您前往關注，謝謝您！',
+            text='112年推動企業數位共好計畫入選名單目前已於軟協官網公告上，謝謝您！',
             actions=[
                 URIAction(
                     label='112年數位共好規範',
