@@ -4,7 +4,7 @@ from skills import add_skill
 import random
 
 
-@add_skill('抽黃皓')
+@add_skill('抽黃皓哦')
 def get(message_request: MessageRequest):
 
     p1 = ImageSendMessage(original_content_url='https://i.imgur.com/CLOf0Vx.jpg',
