@@ -21,12 +21,12 @@ def get(message_request: MessageRequest):
                     uri='https://www.moeasmea.gov.tw/files/10106/562676DF-30D2-4818-9375-3D594A67D85E'
                 ),
                 URIAction(
-                    label='計畫常見Q&A',
-                    uri='https://liff.line.me/1657887101-1DxD04M9'
+                    label='前往軟協官網查看入選公告',
+                    uri='https://www.cisanet.org.tw/News/Detail/5664'
                 ), 
                 URIAction(
-                    label='前往線上提案繳件',
-                    uri='https://www.cisa.tw/365/login/index.php'
+                    label='計畫常見Q&A',
+                    uri='https://liff.line.me/1657887101-1DxD04M9'
                 ), 
                 URIAction(
                     label='查詢受輔導業者是否符合資格',
