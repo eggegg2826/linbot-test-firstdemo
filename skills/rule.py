@@ -36,16 +36,20 @@ def get(message_request: MessageRequest):
         )
     )
 
-    #案例分享會報名
+    #小微卡
     share = TemplateSendMessage(
-        alt_text='112年推動企業數位共好計畫提案說明會',
+        alt_text='小微卡/前測問卷',
         template=ButtonsTemplate(
-            title='112年推動企業數位共好計畫提案說明會',
-            text='台中場-2/15(三)下午兩點\n高雄場-2/16(四)下午兩點\n台北場-2/21(二)下午兩點',
+            title='小微卡/前測問卷',
+            text='1.小微卡/前測問卷需於MOU簽回兩禮拜內填寫\n2.小微卡/前測網址需確認為共好所提供之網址',
             actions=[
                 URIAction(
-                    label='報名說明會',
-                    uri='https://forms.gle/jKriGfsCVJ7pdpW47?openExternalBrowser=1'
+                    label='小微卡',
+                    uri='小微卡：https://cisatw365.pse.is/45jewh'
+                ),
+                URIAction(
+                    label='前測問卷',
+                    uri='https://cisatw365.pse.is/4t979d'
                 )
             ]
         )
@@ -69,7 +73,7 @@ def get(message_request: MessageRequest):
     #IF規則
     if ("規範" in mg_st) or ("計畫" in mg_st) or ("問題" in mg_st) or ("資訊" in mg_st):
         return[rule]
-    elif ("A" in mg_st):
+    elif ("小微卡" in mg_st) or ("問卷" in mg_st):
         return[share]
     elif ("官網" in mg_st) or ("fb" in mg_st) or ("FB" in mg_st):
         return[ow]
