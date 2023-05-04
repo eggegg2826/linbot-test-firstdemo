@@ -45,7 +45,7 @@ def get(message_request: MessageRequest):
             actions=[
                 URIAction(
                     label='小微卡',
-                    uri='小微卡：https://cisatw365.pse.is/45jewh'
+                    uri='https://cisatw365.pse.is/45jewh'
                 ),
                 URIAction(
                     label='前測問卷',
