@@ -41,7 +41,7 @@ def get(message_request: MessageRequest):
         alt_text='小微卡/前測問卷',
         template=ButtonsTemplate(
             title='小微卡/前測問卷',
-            text='1.小微卡/前測問卷需於MOU簽回兩禮拜內填寫\n2.小微卡/前測網址需確認為共好所提供之網址',
+            text='*注意事項*\n1.小微卡/前測問卷需於MOU簽回兩禮拜內填寫\n2.小微卡/前測網址需確認為數位共好所提供之網址',
             actions=[
                 URIAction(
                     label='小微卡',
